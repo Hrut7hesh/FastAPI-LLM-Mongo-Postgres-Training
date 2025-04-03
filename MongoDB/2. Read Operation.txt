@@ -1,0 +1,3 @@
+db.movie.find({'meta.rating':{$gt:9.2},'meta.runtime':{$lt:100}})
+db.movie.find({$or: [{genre:'drama'},{genre:'action'}]})
+db.movie.find({$expr: {$gt: ['$visitors','$expectedVisitors']}})

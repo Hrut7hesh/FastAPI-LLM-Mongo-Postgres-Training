@@ -1,0 +1,9 @@
+db.boxoffice.find({ genre: { $size: 2 } })
+
+
+
+db.boxoffice.find({ "meta.aired": 2018 })
+
+
+
+db.boxoffice.find({ "meta.rating": { $gt: 8, $lt: 10 } })

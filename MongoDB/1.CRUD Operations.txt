@@ -1,0 +1,7 @@
+db.patient.insertMany([  {     "firstName": "Mark",     "lastName": "Hawthorne",     "age": 20,     "history": [       { "disease": "cold", "treatment": "pills"}     ]   },   {     "firstName": "Ashley",     "lastName": "Brown",     "age": 35,     "history": [       { "disease": "flu", "treatment": "flu vaccine"},      F { "disease": "cancer", "treatment": "chemotherapy"}     ]   },   {     "firstName": "David",     "lastName": "Garcia",     "age": 40,     "history": [       { "disease": "diabetes", "treatment": "insulin"}     ]   }])
+
+db.patient.updateOne({firstName: "David"}, {$set: {age: 12, firstName: "hamada", history: [{disease: "cold}]}})
+
+db.patient.find({age: {$gt: 30}})
+
+db.patient.deleteMany({"history.disease": "cold"})
